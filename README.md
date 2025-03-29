@@ -27,3 +27,7 @@ By end of this project, you should understand:
 ## Expected Outcome
 
 A musical instrument that can be played using the computer’s keyboard. As a note is selected the user should see a visible indication that the key and note was played
+
+## Preview
+
+![Black and white photo depicting a large crowd of people gathered together, with drum kit below](./images/preview.png)
