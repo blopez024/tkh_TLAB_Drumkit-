@@ -7,80 +7,129 @@
     <link rel="icon" href="https://fav.farm/🔥" />
   </head>
   <body>
-    <div class="keys">
-      <div data-key="65" class="key">
-        <kbd>A</kbd>
-        <span class="sound">clap</span>
+    <!-- Slideshow -->
+    <div class="slideshow-container">
+      <!-- Drum Kit -->
+      <div class="mySlides fade">
+        <h1>Drum Kit</h1>
+        <div class="keys">
+          <div data-drum="65" class="key">
+            <kbd>A</kbd>
+            <span class="sound">clap</span>
+          </div>
+          <div data-drum="83" class="key">
+            <kbd>S</kbd>
+            <span class="sound">hihat</span>
+          </div>
+          <div data-drum="68" class="key">
+            <kbd>D</kbd>
+            <span class="sound">kick</span>
+          </div>
+          <div data-drum="70" class="key">
+            <kbd>F</kbd>
+            <span class="sound">openhat</span>
+          </div>
+          <div data-drum="71" class="key">
+            <kbd>G</kbd>
+            <span class="sound">boom</span>
+          </div>
+          <div data-drum="72" class="key">
+            <kbd>H</kbd>
+            <span class="sound">ride</span>
+          </div>
+          <div data-drum="74" class="key">
+            <kbd>J</kbd>
+            <span class="sound">snare</span>
+          </div>
+          <div data-drum="75" class="key">
+            <kbd>K</kbd>
+            <span class="sound">tom</span>
+          </div>
+          <div data-drum="76" class="key">
+            <kbd>L</kbd>
+            <span class="sound">tink</span>
+          </div>
+        </div>
       </div>
-      <div data-key="83" class="key">
-        <kbd>S</kbd>
-        <span class="sound">hihat</span>
+
+      <!-- Guitar Kit -->
+      <div class="mySlides fade">
+        <h1>Guitar Kit</h1>
+        <div class="keys">
+          <div data-guitar="65" class="key">
+            <kbd>A</kbd>
+            <span class="sound">1st String E</span>
+          </div>
+          <div data-guitar="83" class="key">
+            <kbd>S</kbd>
+            <span class="sound">2nd String B</span>
+          </div>
+          <div data-guitar="68" class="key">
+            <kbd>D</kbd>
+            <span class="sound">3rd String G</span>
+          </div>
+          <div data-guitar="70" class="key">
+            <kbd>F</kbd>
+            <span class="sound">4th String D</span>
+          </div>
+          <div data-guitar="71" class="key">
+            <kbd>G</kbd>
+            <span class="sound">5th String A</span>
+          </div>
+          <div data-guitar="72" class="key">
+            <kbd>H</kbd>
+            <span class="sound">6th String E</span>
+          </div>
+          <div data-guitar="74" class="key">
+            <kbd>J</kbd>
+            <span class="sound">C</span>
+          </div>
+          <div data-guitar="75" class="key">
+            <kbd>K</kbd>
+            <span class="sound">D</span>
+          </div>
+          <div data-guitar="76" class="key">
+            <kbd>L</kbd>
+            <span class="sound">Dm</span>
+          </div>
+          
+        </div>
       </div>
-      <div data-key="68" class="key">
-        <kbd>D</kbd>
-        <span class="sound">kick</span>
-      </div>
-      <div data-key="70" class="key">
-        <kbd>F</kbd>
-        <span class="sound">openhat</span>
-      </div>
-      <div data-key="71" class="key">
-        <kbd>G</kbd>
-        <span class="sound">boom</span>
-      </div>
-      <div data-key="72" class="key">
-        <kbd>H</kbd>
-        <span class="sound">ride</span>
-      </div>
-      <div data-key="74" class="key">
-        <kbd>J</kbd>
-        <span class="sound">snare</span>
-      </div>
-      <div data-key="75" class="key">
-        <kbd>K</kbd>
-        <span class="sound">tom</span>
-      </div>
-      <div data-key="76" class="key">
-        <kbd>L</kbd>
-        <span class="sound">tink</span>
+
+      <!-- Next and previous buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+      <!-- The dots/circles -->
+      <div style="text-align: center">
+        <span class="dot active" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
       </div>
     </div>
 
-    <audio data-key="65" src="sounds/clap.wav"></audio>
-    <audio data-key="83" src="sounds/hihat.wav"></audio>
-    <audio data-key="68" src="sounds/kick.wav"></audio>
-    <audio data-key="70" src="sounds/openhat.wav"></audio>
-    <audio data-key="71" src="sounds/boom.wav"></audio>
-    <audio data-key="72" src="sounds/ride.wav"></audio>
-    <audio data-key="74" src="sounds/snare.wav"></audio>
-    <audio data-key="75" src="sounds/tom.wav"></audio>
-    <audio data-key="76" src="sounds/tink.wav"></audio>
+    <!-- Drum Kit Audio -->
+    <audio data-drum="65" src="sounds/clap.wav"></audio>
+    <audio data-drum="83" src="sounds/hihat.wav"></audio>
+    <audio data-drum="68" src="sounds/kick.wav"></audio>
+    <audio data-drum="70" src="sounds/openhat.wav"></audio>
+    <audio data-drum="71" src="sounds/boom.wav"></audio>
+    <audio data-drum="72" src="sounds/ride.wav"></audio>
+    <audio data-drum="74" src="sounds/snare.wav"></audio>
+    <audio data-drum="75" src="sounds/tom.wav"></audio>
+    <audio data-drum="76" src="sounds/tink.wav"></audio>
 
-    <script>
-      function playSound(e) {
-        const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
-        const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+    <!-- Guitar Kit Audio -->
 
-        if (!audio) return;
+    <audio data-guitar="65" src="sounds/1st_String_E_64kb.wav"></audio>
+    <audio data-guitar="83" src="sounds/2nd_String_B__64kb.wav"></audio>
+    <audio data-guitar="68" src="sounds/3rd_String_G_64kb.wav"></audio>
+    <audio data-guitar="70" src="sounds/4th_String_D_64kb.wav"></audio>
+    <audio data-guitar="71" src="sounds/5th_String_A_64kb.wav"></audio>
+    <audio data-guitar="72" src="sounds/6th_String_E_64kb.wav"></audio>
+    <audio data-guitar="74" src="sounds/C_64kb.wav"></audio>
+    <audio data-guitar="75" src="sounds/D_64kb.wav"></audio>
+    <audio data-guitar="76" src="sounds/Dm_64kb.wav"></audio>
 
-        audio.currentTime = 0; // rewind to the start
-        audio.play();
-
-        key.classList.add('playing');
-      }
-
-      function removeTransition(e) {
-        if (e.propertyName !== 'transform') return; // skip
-
-        this.classList.remove('playing');
-      }
-
-      const keys = document.querySelectorAll('.key');
-      keys.forEach((key) =>
-        key.addEventListener('transitionend', removeTransition),
-      );
-
-      window.addEventListener('keydown', playSound);
-    </script>
+    <script src="./js/main.js"></script>
   </body>
 </html>
